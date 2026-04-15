@@ -1,0 +1,646 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuthiram Store | Fresh Groceries Delivered in Kovilpatti</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">🛒</div>
+            <div class="preloader-text">Samuthiram Store</div>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">🛒</div>
+                <div class="logo-text">
+                    <span class="logo-name">Samuthiram</span>
+                    <span class="logo-sub">STORE • Kovilpatti</span>
+                </div>
+            </div>
+            <nav class="nav-desktop">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#offers" class="nav-link">Offers</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-toggle" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-toggle" id="cartToggle">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </div>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- Search Bar Expandable -->
+        <div class="search-bar-container" id="searchBarContainer">
+            <div class="search-bar-inner">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for vegetables, fruits, rice, snacks..." autocomplete="off">
+                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-suggestions" id="searchSuggestions"></div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <div class="logo">
+                    <div class="logo-icon">🛒</div>
+                    <div class="logo-text">
+                        <span class="logo-name">Samuthiram</span>
+                        <span class="logo-sub">STORE</span>
+                    </div>
+                </div>
+                <button class="mobile-nav-close" id="mobileNavClose"><i class="fas fa-times"></i></button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="#home" class="mobile-link"><i class="fas fa-home"></i> Home</a>
+                <a href="#categories" class="mobile-link"><i class="fas fa-th-large"></i> Categories</a>
+                <a href="#products" class="mobile-link"><i class="fas fa-box"></i> Products</a>
+                <a href="#offers" class="mobile-link"><i class="fas fa-tags"></i> Offers</a>
+                <a href="#about" class="mobile-link"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="#contact" class="mobile-link"><i class="fas fa-phone"></i> Contact</a>
+            </nav>
+            <div class="mobile-nav-footer">
+                <a href="https://wa.me/919345635274" class="mobile-whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge scroll-reveal">
+                    <span class="badge-dot"></span>
+                    24/7 Delivery Available in Kovilpatti
+                </div>
+                <h1 class="hero-title scroll-reveal">
+                    Fresh Groceries<br>
+                    Delivered in <span class="gradient-text">Minutes</span> 🛒
+                </h1>
+                <p class="hero-subtitle scroll-reveal">
+                    Your trusted neighborhood store with 1500+ quality products. 
+                    From farm-fresh vegetables to daily essentials — everything at your doorstep.
+                </p>
+                <div class="hero-search scroll-reveal">
+                    <div class="hero-search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="heroSearchInput" placeholder="Search for groceries, vegetables, fruits...">
+                        <button class="hero-search-btn">Search</button>
+                    </div>
+                </div>
+                <div class="hero-cta scroll-reveal">
+                    <a href="#products" class="btn btn-primary btn-lg">
+                        <i class="fas fa-shopping-basket"></i> Browse Products
+                    </a>
+                    <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order." class="btn btn-whatsapp btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    </a>
+                </div>
+                <div class="hero-stats scroll-reveal">
+                    <div class="stat">
+                        <span class="stat-number" data-count="1500">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="5000">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="24">0</span><span class="stat-plus">/7</span>
+                        <span class="stat-label">Delivery</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual scroll-reveal">
+                <div class="hero-image-wrapper">
+                    <div class="hero-circle-bg"></div>
+                    <div class="floating-items">
+                        <div class="float-item float-1">🍅</div>
+                        <div class="float-item float-2">🥕</div>
+                        <div class="float-item float-3">🍌</div>
+                        <div class="float-item float-4">🥬</div>
+                        <div class="float-item float-5">🍎</div>
+                        <div class="float-item float-6">🫑</div>
+                        <div class="float-item float-7">🥒</div>
+                        <div class="float-item float-8">🍊</div>
+                    </div>
+                    <div class="hero-main-image">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=600&fit=crop" alt="Fresh Groceries" loading="eager">
+                    </div>
+                    <div class="hero-floating-card card-delivery">
+                        <div class="hf-icon">🚚</div>
+                        <div class="hf-text">
+                            <strong>Free Delivery</strong>
+                            <span>Above ₹500</span>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card card-fresh">
+                        <div class="hf-icon">✅</div>
+                        <div class="hf-text">
+                            <strong>100% Fresh</strong>
+                            <span>Quality Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="var(--bg-primary)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Category Scroller -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-tag">Categories</div>
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Browse through our wide range of fresh and quality products</p>
+            </div>
+            <div class="category-scroller-wrapper scroll-reveal">
+                <button class="scroll-btn scroll-left" id="catScrollLeft"><i class="fas fa-chevron-left"></i></button>
+                <div class="category-scroller" id="categoryScroller">
+                    <div class="category-card" data-category="vegetables">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
+                            <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=120&h=120&fit=crop" alt="Vegetables">
+                        </div>
+                        <span class="cat-name">Vegetables</span>
+                        <span class="cat-count">120+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="fruits">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
+                            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=120&h=120&fit=crop" alt="Fruits">
+                        </div>
+                        <span class="cat-name">Fruits</span>
+                        <span class="cat-count">80+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="rice">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);">
+                            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=120&h=120&fit=crop" alt="Rice & Grains">
+                        </div>
+                        <span class="cat-name">Rice & Grains</span>
+                        <span class="cat-count">60+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="snacks">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+                            <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=120&h=120&fit=crop" alt="Snacks">
+                        </div>
+                        <span class="cat-name">Snacks</span>
+                        <span class="cat-count">200+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="beverages">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #f3e5f5, #e1bee7);">
+                            <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=120&h=120&fit=crop" alt="Beverages">
+                        </div>
+                        <span class="cat-name">Beverages</span>
+                        <span class="cat-count">90+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="dairy">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2);">
+                            <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=120&h=120&fit=crop" alt="Dairy">
+                        </div>
+                        <span class="cat-name">Dairy</span>
+                        <span class="cat-count">45+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="spices">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #fff8e1, #ffecb3);">
+                            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=120&h=120&fit=crop" alt="Spices">
+                        </div>
+                        <span class="cat-name">Spices</span>
+                        <span class="cat-count">75+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="oils">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #efebe9, #d7ccc8);">
+                            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=120&h=120&fit=crop" alt="Oils">
+                        </div>
+                        <span class="cat-name">Oils & Ghee</span>
+                        <span class="cat-count">30+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="cleaning">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #e8eaf6, #c5cae9);">
+                            <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=120&h=120&fit=crop" alt="Cleaning">
+                        </div>
+                        <span class="cat-name">Cleaning</span>
+                        <span class="cat-count">50+ Items</span>
+                    </div>
+                    <div class="category-card" data-category="personal">
+                        <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #fce4ec, #f48fb1);">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=120&h=120&fit=crop" alt="Personal Care">
+                        </div>
+                        <span class="cat-name">Personal Care</span>
+                        <span class="cat-count">65+ Items</span>
+                    </div>
+                </div>
+                <button class="scroll-btn scroll-right" id="catScrollRight"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-tag">Products</div>
+                <h2 class="section-title">Fresh & Quality Products</h2>
+                <p class="section-subtitle">Handpicked fresh items delivered to your doorstep</p>
+            </div>
+            
+            <!-- Filter Tabs -->
+            <div class="filter-tabs scroll-reveal" id="filterTabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="vegetables">🥦 Vegetables</button>
+                <button class="filter-tab" data-filter="fruits">🍎 Fruits</button>
+                <button class="filter-tab" data-filter="rice">🍚 Rice & Grains</button>
+                <button class="filter-tab" data-filter="snacks">🍪 Snacks</button>
+                <button class="filter-tab" data-filter="beverages">🥤 Beverages</button>
+                <button class="filter-tab" data-filter="dairy">🥛 Dairy</button>
+                <button class="filter-tab" data-filter="spices">🌶️ Spices</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be injected by JS -->
+            </div>
+
+            <div class="load-more scroll-reveal">
+                <button class="btn btn-outline" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i> Load More Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-tag">Special Offers</div>
+                <h2 class="section-title">Today's Best Deals</h2>
+                <p class="section-subtitle">Don't miss out on these amazing offers</p>
+            </div>
+            <div class="offers-grid scroll-reveal">
+                <div class="offer-card offer-card-large">
+                    <div class="offer-bg" style="background: linear-gradient(135deg, #1b5e20, #43a047);"></div>
+                    <div class="offer-content">
+                        <span class="offer-badge">Limited Time</span>
+                        <h3>Fresh Vegetables</h3>
+                        <p>Get 10% OFF on all fresh vegetables. Farm to table freshness guaranteed!</p>
+                        <div class="offer-footer">
+                            <a href="#products" class="btn btn-white">Shop Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&h=300&fit=crop" alt="Vegetables Offer">
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-bg" style="background: linear-gradient(135deg, #e65100, #ff8f00);"></div>
+                    <div class="offer-content">
+                        <span class="offer-badge">🚚 Free</span>
+                        <h3>Free Delivery</h3>
+                        <p>On orders above ₹500</p>
+                        <a href="#products" class="offer-link">Order Now →</a>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-bg" style="background: linear-gradient(135deg, #4a148c, #7b1fa2);"></div>
+                    <div class="offer-content">
+                        <span class="offer-badge">New</span>
+                        <h3>Seasonal Fruits</h3>
+                        <p>Fresh seasonal fruits at best prices</p>
+                        <a href="#products" class="offer-link">Explore →</a>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-bg" style="background: linear-gradient(135deg, #01579b, #0288d1);"></div>
+                    <div class="offer-content">
+                        <span class="offer-badge">Daily</span>
+                        <h3>Daily Essentials</h3>
+                        <p>Rice, Oil, Spices & more at great prices</p>
+                        <a href="#products" class="offer-link">Shop Now →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="about">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-tag">Why Us</div>
+                <h2 class="section-title">Why Choose Samuthiram Store?</h2>
+                <p class="section-subtitle">We're committed to providing the best grocery shopping experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #e8f5e9, #a5d6a7);">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Delivery</h3>
+                    <p>We deliver round the clock. Order anytime, get it delivered at your convenience.</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fff3e0, #ffcc80);">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>100% Fresh Products</h3>
+                    <p>We source directly from farms and trusted suppliers. Freshness guaranteed every time.</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #e3f2fd, #90caf9);">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Trusted Since Years</h3>
+                    <p>Samuthiram Store is a trusted name in Kovilpatti. Thousands of happy families rely on us.</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fce4ec, #f48fb1);">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Quick order processing and speedy delivery. Your groceries reach you in minutes!</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f3e5f5, #ce93d8);">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing on all products. Get the best value for your money every day.</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #e0f7fa, #80deea);">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Easy WhatsApp Order</h3>
+                    <p>Simply add items to cart and order via WhatsApp. It's that simple and convenient!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-tag">Reviews</div>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Trusted by thousands of families in Kovilpatti</p>
+            </div>
+            <div class="testimonial-carousel scroll-reveal">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Samuthiram Store has been our family's go-to grocery shop for years. The quality is always excellent and delivery is super fast!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #43a047, #66bb6a);">R</div>
+                            <div class="author-info">
+                                <strong>Rajesh Kumar</strong>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The WhatsApp ordering feature is so convenient! I just send my list and everything arrives fresh at my doorstep. Amazing service!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #e65100, #ff8f00);">P</div>
+                            <div class="author-info">
+                                <strong>Priya Lakshmi</strong>
+                                <span>Kovilpatti</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"Best grocery store in Kovilpatti! They have everything I need. Vegetables are always fresh and the prices are very fair."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #1565c0, #42a5f5);">M</div>
+                            <div class="author-info">
+                                <strong>Murugan S</strong>
+                                <span>Loyal Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"24/7 delivery is a lifesaver! Late night or early morning, they always deliver on time. Highly recommended for everyone!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #7b1fa2, #ab47bc);">K</div>
+                            <div class="author-info">
+                                <strong>Kavitha Devi</strong>
+                                <span>Kovilpatti</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I've tried many stores but Samuthiram is the best. Their spices are authentic and the rice quality is top-notch. Never disappointed!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #00695c, #26a69a);">S</div>
+                            <div class="author-info">
+                                <strong>Senthil Nathan</strong>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="test-btn" id="testPrev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="test-btn" id="testNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card scroll-reveal">
+                <div class="cta-bg-pattern"></div>
+                <div class="cta-content">
+                    <h2>Ready to Order?</h2>
+                    <p>Get fresh groceries delivered to your doorstep in Kovilpatti. Simply add items to cart and order via WhatsApp!</p>
+                    <div class="cta-buttons">
+                        <a href="#products" class="btn btn-white btn-lg">
+                            <i class="fas fa-shopping-basket"></i> Start Shopping
+                        </a>
+                        <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order." class="btn btn-outline-white btn-lg" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="#1a1a2e"/>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-brand">
+                        <div class="logo">
+                            <div class="logo-icon">🛒</div>
+                            <div class="logo-text">
+                                <span class="logo-name">Samuthiram</span>
+                                <span class="logo-sub">STORE • Kovilpatti</span>
+                            </div>
+                        </div>
+                        <p>Your trusted neighborhood grocery store in Kovilpatti. Fresh products, fast delivery, and excellent service since day one.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="https://wa.me/919345635274" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#offers">Offers</a></li>
+                            <li><a href="#about">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Vegetables</a></li>
+                            <li><a href="#">Fruits</a></li>
+                            <li><a href="#">Rice & Grains</a></li>
+                            <li><a href="#">Snacks</a></li>
+                            <li><a href="#">Beverages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Samuthiram Store, Main Road,<br>Kovilpatti, Tamil Nadu</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 98765 43210</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>samuthiramstore@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Open 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Samuthiram Store. All rights reserved. Made with ❤️ in Kovilpatti</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Panel -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="cart-empty-icon">🛒</div>
+                <h4>Your cart is empty</h4>
+                <p>Add some products to get started!</p>
+                <a href="#products" class="btn btn-primary" id="cartBrowseBtn">Browse Products</a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span>Total Items:</span>
+                <span id="cartTotalItems">0</span>
+            </div>
+            <div class="cart-address">
+                <label for="deliveryAddress"><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
+                <textarea id="deliveryAddress" placeholder="Enter your delivery address in Kovilpatti..." rows="2"></textarea>
+            </div>
+            <button class="btn btn-whatsapp btn-block" id="orderWhatsApp">
+                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+            </button>
+            <button class="btn btn-outline btn-block btn-sm" id="clearCart">
+                <i class="fas fa-trash"></i> Clear Cart
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order." class="floating-whatsapp" id="floatingWhatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Order on WhatsApp</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/products-db.js"></script>
+</body>
+</html>

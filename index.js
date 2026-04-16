@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 const MONGO_URI = process.env.MONGODB_URI;
-
+console.log("MONGO_URI:", process.env.MONGODB_URI);
 if (!MONGO_URI) {
     console.error("❌ MONGODB_URI is NOT set!");
     process.exit(1);

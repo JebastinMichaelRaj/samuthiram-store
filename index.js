@@ -53,11 +53,17 @@ app.get('/api/products', async (req, res) => {
 
 app.post('/api/products', async (req, res) => {
     try {
+        console.log("Incoming product:", req.body);
+
         const lastProduct = await Product.findOne().sort({ id: -1 });
         const newId = lastProduct ? lastProduct.id + 1 : 1;
 
         const newProduct = new Product({
-            ...req.body,
+            name: req.body.name || "No Name",
+            price: Number(req.body.price) || 0,
+            category: req.body.category || "general",
+            inStock: req.body.inStock ?? true,
+            image: req.body.image || "",
             id: newId
         });
 
@@ -65,7 +71,7 @@ app.post('/api/products', async (req, res) => {
         res.status(201).json(savedProduct);
 
     } catch (err) {
-        console.error("POST ERROR:", err);
+        console.error("POST ERROR FULL:", err);
         res.status(400).json({ error: err.message });
     }
 });

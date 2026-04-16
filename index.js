@@ -13,11 +13,17 @@ app.use(express.json());
 // Serve static files from the root
 app.use(express.static(__dirname));
 
-// MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/samuthiram_store')
+const MONGO_URI = process.env.MONGODB_URI;
+
+if (!MONGO_URI) {
+    console.error("❌ MONGODB_URI is NOT set!");
+    process.exit(1);
+}
+
+mongoose.connect(MONGO_URI)
     .then(async () => {
-        console.log('MongoDB connected');
-        // Seed if empty
+        console.log('✅ MongoDB connected');
+        
         const count = await Product.countDocuments();
         if (count === 0) {
             console.log('Seeding initial products data...');
@@ -25,8 +31,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/samuthira
             console.log('Database seeded successfully!');
         }
     })
-    .catch(err => console.log('MongoDB connection error:', err));
-
+    .catch(err => console.log('❌ MongoDB connection error:', err));
 // API Routes
 app.get('/api/products', async (req, res) => {
     try {

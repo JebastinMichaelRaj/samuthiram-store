@@ -32,25 +32,31 @@ mongoose.connect(MONGO_URI)
 
         const count = await Product.countDocuments();
         if (count === 0) {
-            console.log('Seeding initial products data...');
             await Product.insertMany(defaultProducts);
-            console.log('Database seeded successfully!');
         }
-    })
-    .catch(err => console.error('❌ MongoDB connection error:', err));
 
+        // ✅ START SERVER ONLY AFTER DB CONNECTS
+        app.listen(PORT, () => {
+            console.log(`🚀 Server running on port ${PORT}`);
+        });
+
+    })
+    .catch(err => {
+        console.error('❌ MongoDB connection error:', err);
+        process.exit(1);
+    });
 // ✅ API Routes
 
 app.get('/api/products', async (req, res) => {
     try {
+        console.log("📦 Fetching products...");
         const products = await Product.find().sort({ id: 1 });
         res.json(products);
     } catch (err) {
-        console.error("GET ERROR:", err);
+        console.error("❌ GET ERROR FULL:", err);
         res.status(500).json({ error: err.message });
     }
 });
-
 app.post('/api/products', async (req, res) => {
     try {
         console.log("Incoming product:", req.body);

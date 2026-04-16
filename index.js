@@ -21,6 +21,8 @@ const MONGO_URI = process.env.MONGODB_URI;
 
 console.log("MONGO_URI:", MONGO_URI);
 
+const PORT = process.env.PORT || 10000;
+
 if (!MONGO_URI) {
     console.error("❌ MONGODB_URI is NOT set!");
     process.exit(1);
@@ -123,8 +125,4 @@ app.use((req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-const PORT = process.env.PORT || 10000;
-
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-});
+// Server listening is handled within the MongoDB connection success block

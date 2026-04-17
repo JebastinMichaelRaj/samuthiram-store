@@ -436,7 +436,7 @@ function sendWhatsAppOrder() {
     });
     msg += `\n💰 *Total: ₹${total}*\n\n📍 *Address:*\n${address}\n\n🕐 Please deliver ASAP. Thank you! 🙏`;
 
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/919345635274?text=${encodeURIComponent(msg)}`, '_blank');
     showToast('Opening WhatsApp...', 'success');
 
     setTimeout(() => { cart = []; saveCart(); updateCartBadge(); updateCartUI(); renderProducts(); closeCart(); }, 1000);

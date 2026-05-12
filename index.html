@@ -1,14 +1,16 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuthiram Store | Fresh Groceries Delivered in Kovilpatti</title>
     <link rel="icon" type="image/png" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="assets/css/fonts.googleapis.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.min.css">
 </head>
+
 <body>
 
     <!-- Preloader -->
@@ -16,7 +18,9 @@
         <div class="preloader-inner">
             <div class="preloader-icon">🛒</div>
             <div class="preloader-text">Samuthiram Store</div>
-            <div class="preloader-bar"><div class="preloader-fill"></div></div>
+            <div class="preloader-bar">
+                <div class="preloader-fill"></div>
+            </div>
         </div>
     </div>
 
@@ -60,7 +64,8 @@
         <div class="search-bar-container" id="searchBarContainer">
             <div class="search-bar-inner">
                 <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Search for vegetables, fruits, rice, snacks..." autocomplete="off">
+                <input type="text" id="searchInput" placeholder="Search for vegetables, fruits, rice, snacks..."
+                    autocomplete="off">
                 <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
             </div>
             <div class="search-suggestions" id="searchSuggestions"></div>
@@ -112,13 +117,14 @@
                     Delivered in <span class="gradient-text">Minutes</span> 🛒
                 </h1>
                 <p class="hero-subtitle scroll-reveal">
-                    Your trusted neighborhood store with 1500+ quality products. 
+                    Your trusted neighborhood store with 1500+ quality products.
                     From farm-fresh vegetables to daily essentials — everything at your doorstep.
                 </p>
                 <div class="hero-search scroll-reveal">
                     <div class="hero-search-box">
                         <i class="fas fa-search"></i>
-                        <input type="text" id="heroSearchInput" placeholder="Search for groceries, vegetables, fruits...">
+                        <input type="text" id="heroSearchInput"
+                            placeholder="Search for groceries, vegetables, fruits...">
                         <button class="hero-search-btn">Search</button>
                     </div>
                 </div>
@@ -126,7 +132,8 @@
                     <a href="#products" class="btn btn-primary btn-lg">
                         <i class="fas fa-shopping-basket"></i> Browse Products
                     </a>
-                    <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order." class="btn btn-whatsapp btn-lg" target="_blank">
+                    <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order."
+                        class="btn btn-whatsapp btn-lg" target="_blank">
                         <i class="fab fa-whatsapp"></i> Order on WhatsApp
                     </a>
                 </div>
@@ -161,7 +168,8 @@
                         <div class="float-item float-8">🍊</div>
                     </div>
                     <div class="hero-main-image">
-                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=600&fit=crop" alt="Fresh Groceries" loading="eager">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=600&fit=crop"
+                            alt="Fresh Groceries" loading="eager">
                     </div>
                     <div class="hero-floating-card card-delivery">
                         <div class="hf-icon">🚚</div>
@@ -182,7 +190,9 @@
         </div>
         <div class="hero-wave">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="var(--bg-primary)"/>
+                <path
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
+                    fill="var(--bg-primary)" />
             </svg>
         </div>
     </section>
@@ -200,76 +210,87 @@
                 <div class="category-scroller" id="categoryScroller">
                     <div class="category-card" data-category="vegetables">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
-                            <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=120&h=120&fit=crop" alt="Vegetables">
+                            <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=120&h=120&fit=crop"
+                                alt="Vegetables">
                         </div>
                         <span class="cat-name">Vegetables</span>
                         <span class="cat-count">120+ Items</span>
                     </div>
                     <div class="category-card" data-category="fruits">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
-                            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=120&h=120&fit=crop" alt="Fruits">
+                            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=120&h=120&fit=crop"
+                                alt="Fruits">
                         </div>
                         <span class="cat-name">Fruits</span>
                         <span class="cat-count">80+ Items</span>
                     </div>
                     <div class="category-card" data-category="rice">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);">
-                            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=120&h=120&fit=crop" alt="Rice & Grains">
+                            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=120&h=120&fit=crop"
+                                alt="Rice & Grains">
                         </div>
                         <span class="cat-name">Rice & Grains</span>
                         <span class="cat-count">60+ Items</span>
                     </div>
                     <div class="category-card" data-category="snacks">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
-                            <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=120&h=120&fit=crop" alt="Snacks">
+                            <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=120&h=120&fit=crop"
+                                alt="Snacks">
                         </div>
                         <span class="cat-name">Snacks</span>
                         <span class="cat-count">200+ Items</span>
                     </div>
                     <div class="category-card" data-category="beverages">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #f3e5f5, #e1bee7);">
-                            <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=120&h=120&fit=crop" alt="Beverages">
+                            <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=120&h=120&fit=crop"
+                                alt="Beverages">
                         </div>
                         <span class="cat-name">Beverages</span>
                         <span class="cat-count">90+ Items</span>
                     </div>
                     <div class="category-card" data-category="dairy">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #e0f7fa, #b2ebf2);">
-                            <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=120&h=120&fit=crop" alt="Dairy">
+                            <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=120&h=120&fit=crop"
+                                alt="Dairy">
                         </div>
                         <span class="cat-name">Dairy</span>
                         <span class="cat-count">45+ Items</span>
                     </div>
                     <div class="category-card" data-category="spices">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #fff8e1, #ffecb3);">
-                            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=120&h=120&fit=crop" alt="Spices">
+                            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=120&h=120&fit=crop"
+                                alt="Spices">
                         </div>
                         <span class="cat-name">Spices</span>
                         <span class="cat-count">75+ Items</span>
                     </div>
                     <div class="category-card" data-category="oils">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #efebe9, #d7ccc8);">
-                            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=120&h=120&fit=crop" alt="Oils">
+                            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=120&h=120&fit=crop"
+                                alt="Oils">
                         </div>
                         <span class="cat-name">Oils & Ghee</span>
                         <span class="cat-count">30+ Items</span>
                     </div>
                     <div class="category-card" data-category="cleaning">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #e8eaf6, #c5cae9);">
-                            <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=120&h=120&fit=crop" alt="Cleaning">
+                            <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=120&h=120&fit=crop"
+                                alt="Cleaning">
                         </div>
                         <span class="cat-name">Cleaning</span>
                         <span class="cat-count">50+ Items</span>
                     </div>
                     <div class="category-card" data-category="personal">
                         <div class="cat-icon-wrapper" style="background: linear-gradient(135deg, #fce4ec, #f48fb1);">
-                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=120&h=120&fit=crop" alt="Personal Care">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=120&h=120&fit=crop"
+                                alt="Personal Care">
                         </div>
                         <span class="cat-name">Personal Care</span>
                         <span class="cat-count">65+ Items</span>
                     </div>
                 </div>
-                <button class="scroll-btn scroll-right" id="catScrollRight"><i class="fas fa-chevron-right"></i></button>
+                <button class="scroll-btn scroll-right" id="catScrollRight"><i
+                        class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
@@ -282,7 +303,7 @@
                 <h2 class="section-title">Fresh & Quality Products</h2>
                 <p class="section-subtitle">Handpicked fresh items delivered to your doorstep</p>
             </div>
-            
+
             <!-- Filter Tabs -->
             <div class="filter-tabs scroll-reveal" id="filterTabs">
                 <button class="filter-tab active" data-filter="all">All</button>
@@ -328,7 +349,8 @@
                         </div>
                     </div>
                     <div class="offer-image">
-                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&h=300&fit=crop" alt="Vegetables Offer">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&h=300&fit=crop"
+                            alt="Vegetables Offer">
                     </div>
                 </div>
                 <div class="offer-card">
@@ -429,11 +451,14 @@
                 <div class="testimonial-track" id="testimonialTrack">
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Samuthiram Store has been our family's go-to grocery shop for years. The quality is always excellent and delivery is super fast!"</p>
+                        <p class="testimonial-text">"Samuthiram Store has been our family's go-to grocery shop for
+                            years. The quality is always excellent and delivery is super fast!"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar" style="background: linear-gradient(135deg, #43a047, #66bb6a);">R</div>
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #43a047, #66bb6a);">R
+                            </div>
                             <div class="author-info">
                                 <strong>Rajesh Kumar</strong>
                                 <span>Regular Customer</span>
@@ -442,11 +467,14 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"The WhatsApp ordering feature is so convenient! I just send my list and everything arrives fresh at my doorstep. Amazing service!"</p>
+                        <p class="testimonial-text">"The WhatsApp ordering feature is so convenient! I just send my list
+                            and everything arrives fresh at my doorstep. Amazing service!"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar" style="background: linear-gradient(135deg, #e65100, #ff8f00);">P</div>
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #e65100, #ff8f00);">P
+                            </div>
                             <div class="author-info">
                                 <strong>Priya Lakshmi</strong>
                                 <span>Kovilpatti</span>
@@ -455,11 +483,14 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p class="testimonial-text">"Best grocery store in Kovilpatti! They have everything I need. Vegetables are always fresh and the prices are very fair."</p>
+                        <p class="testimonial-text">"Best grocery store in Kovilpatti! They have everything I need.
+                            Vegetables are always fresh and the prices are very fair."</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar" style="background: linear-gradient(135deg, #1565c0, #42a5f5);">M</div>
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #1565c0, #42a5f5);">M
+                            </div>
                             <div class="author-info">
                                 <strong>Murugan S</strong>
                                 <span>Loyal Customer</span>
@@ -468,11 +499,14 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"24/7 delivery is a lifesaver! Late night or early morning, they always deliver on time. Highly recommended for everyone!"</p>
+                        <p class="testimonial-text">"24/7 delivery is a lifesaver! Late night or early morning, they
+                            always deliver on time. Highly recommended for everyone!"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar" style="background: linear-gradient(135deg, #7b1fa2, #ab47bc);">K</div>
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #7b1fa2, #ab47bc);">K
+                            </div>
                             <div class="author-info">
                                 <strong>Kavitha Devi</strong>
                                 <span>Kovilpatti</span>
@@ -481,11 +515,14 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"I've tried many stores but Samuthiram is the best. Their spices are authentic and the rice quality is top-notch. Never disappointed!"</p>
+                        <p class="testimonial-text">"I've tried many stores but Samuthiram is the best. Their spices are
+                            authentic and the rice quality is top-notch. Never disappointed!"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar" style="background: linear-gradient(135deg, #00695c, #26a69a);">S</div>
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #00695c, #26a69a);">S
+                            </div>
                             <div class="author-info">
                                 <strong>Senthil Nathan</strong>
                                 <span>Regular Customer</span>
@@ -509,12 +546,14 @@
                 <div class="cta-bg-pattern"></div>
                 <div class="cta-content">
                     <h2>Ready to Order?</h2>
-                    <p>Get fresh groceries delivered to your doorstep in Kovilpatti. Simply add items to cart and order via WhatsApp!</p>
+                    <p>Get fresh groceries delivered to your doorstep in Kovilpatti. Simply add items to cart and order
+                        via WhatsApp!</p>
                     <div class="cta-buttons">
                         <a href="#products" class="btn btn-white btn-lg">
                             <i class="fas fa-shopping-basket"></i> Start Shopping
                         </a>
-                        <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order." class="btn btn-outline-white btn-lg" target="_blank">
+                        <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order."
+                            class="btn btn-outline-white btn-lg" target="_blank">
                             <i class="fab fa-whatsapp"></i> WhatsApp Us
                         </a>
                     </div>
@@ -527,7 +566,9 @@
     <footer class="footer" id="contact">
         <div class="footer-wave">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="#1a1a2e"/>
+                <path
+                    d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
+                    fill="#1a1a2e" />
             </svg>
         </div>
         <div class="footer-content">
@@ -541,12 +582,14 @@
                                 <span class="logo-sub">STORE • Kovilpatti</span>
                             </div>
                         </div>
-                        <p>Your trusted neighborhood grocery store in Kovilpatti. Fresh products, fast delivery, and excellent service since day one.</p>
+                        <p>Your trusted neighborhood grocery store in Kovilpatti. Fresh products, fast delivery, and
+                            excellent service since day one.</p>
                         <div class="social-links">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                            <a href="https://wa.me/919345635274" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://wa.me/919345635274" class="social-link whatsapp"><i
+                                    class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="footer-col">
@@ -620,7 +663,8 @@
             </div>
             <div class="cart-address">
                 <label for="deliveryAddress"><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
-                <textarea id="deliveryAddress" placeholder="Enter your delivery address in Kovilpatti..." rows="2"></textarea>
+                <textarea id="deliveryAddress" placeholder="Enter your delivery address in Kovilpatti..."
+                    rows="2"></textarea>
             </div>
             <button class="btn btn-whatsapp btn-block" id="orderWhatsApp">
                 <i class="fab fa-whatsapp"></i> Order on WhatsApp
@@ -632,7 +676,8 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order." class="floating-whatsapp" id="floatingWhatsapp" target="_blank">
+    <a href="https://wa.me/919345635274?text=Hi%20Samuthiram%20Store!%20I%20want%20to%20place%20an%20order."
+        class="floating-whatsapp" id="floatingWhatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-tooltip">Order on WhatsApp</span>
     </a>
@@ -649,7 +694,8 @@
 
         <!-- Track by ID -->
         <div class="oh-track-bar">
-            <input type="text" id="orderTrackInput" placeholder="Enter Order ID (e.g. SS-20250510-0001)" autocomplete="off">
+            <input type="text" id="orderTrackInput" placeholder="Enter Order ID (e.g. SS-20250510-0001)"
+                autocomplete="off">
             <button id="orderTrackBtn"><i class="fas fa-search"></i> Track</button>
         </div>
 
@@ -671,4 +717,5 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/products-db.js"></script>
 </body>
+
 </html>

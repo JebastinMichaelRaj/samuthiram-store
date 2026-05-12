@@ -46,45 +46,46 @@ const ProductDB = {
         return this.cache.find(p => p.id === parseInt(id));
     },
 
-    add(product) {
-        product.id = this.cache.length > 0 ? Math.max(...this.cache.map(p => p.id)) + 1 : 1;
-        product.lastUpdated = new Date().toISOString();
-        this.cache.push(product);
-
-        // Background update
-        fetch('/api/products', {
+    async add(product) {
+        const res = await fetch('/api/products', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(product)
-        }).then(() => this.fetchAll()).catch(console.error);
-
-        return product;
-    },
-
-    update(id, updates) {
-        const index = this.cache.findIndex(p => p.id === parseInt(id));
-        if (index !== -1) {
-            this.cache[index] = { ...this.cache[index], ...updates, lastUpdated: new Date().toISOString() };
-            
-            // Background update
-            fetch(`/api/products/${id}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(updates)
-            }).then(() => this.fetchAll()).catch(console.error);
-            
-            return this.cache[index];
+        });
+        if (!res.ok) {
+            const errText = await res.text();
+            throw new Error(errText || `Server error ${res.status}`);
         }
-        return null;
+        const saved = await res.json();
+        // Use the server-assigned ID (avoids race-condition duplicate IDs)
+        this.cache.push(saved);
+        return saved;
     },
 
-    delete(id) {
+    async update(id, updates) {
+        const res = await fetch(`/api/products/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updates)
+        });
+        if (!res.ok) {
+            const errText = await res.text();
+            throw new Error(errText || `Server error ${res.status}`);
+        }
+        const updated = await res.json();
+        const idx = this.cache.findIndex(p => p.id === updated.id);
+        if (idx !== -1) this.cache[idx] = updated;
+        return updated;
+    },
+
+    async delete(id) {
+        const res = await fetch(`/api/products/${id}`, { method: 'DELETE' });
+        if (!res.ok) {
+            const errText = await res.text();
+            throw new Error(errText || `Server error ${res.status}`);
+        }
+        // Remove from cache only after server confirms deletion
         this.cache = this.cache.filter(p => p.id !== parseInt(id));
-        
-        // Background update
-        fetch(`/api/products/${id}`, {
-            method: 'DELETE'
-        }).then(() => this.fetchAll()).catch(console.error);
     },
 
     bulkUpdatePrices(updates) {
@@ -106,16 +107,12 @@ const ProductDB = {
         )).then(() => this.fetchAll()).catch(console.error);
     },
 
-    toggleStock(id) {
+    async toggleStock(id) {
         const product = this.cache.find(p => p.id === parseInt(id));
-        if (product) {
-            product.inStock = !product.inStock;
-            product.lastUpdated = new Date().toISOString();
-            
-            this.update(id, { inStock: product.inStock });
-            return product;
-        }
-        return null;
+        if (!product) return null;
+        const newStock = !product.inStock;
+        const updated = await this.update(id, { inStock: newStock });
+        return updated;
     },
 
     resetToDefaults() {

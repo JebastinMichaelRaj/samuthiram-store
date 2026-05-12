@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Samuthiram Store</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,7 +15,7 @@
     <div class="login-screen" id="loginScreen">
         <div class="login-card">
             <div class="login-header">
-                <div class="login-icon">🛒</div>
+                <img src="assets/img/logo.png" alt="Samuthiram Store Logo" style="height: 64px; border-radius: 12px; margin-bottom: 12px;">
                 <h1>Samuthiram Store</h1>
                 <p>Admin Control Panel</p>
             </div>
@@ -50,7 +51,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <span class="sidebar-logo-icon">🛒</span>
+                    <img src="assets/img/logo.png" alt="Logo" style="height: 36px; border-radius: 8px;">
                     <div>
                         <div class="sidebar-brand">Samuthiram</div>
                         <div class="sidebar-sub">Admin Panel</div>
@@ -70,6 +71,10 @@
                 </a>
                 <a href="#" class="sidebar-link" data-page="quick-price">
                     <i class="fas fa-tags"></i> Quick Price Update
+                </a>
+                <a href="#" class="sidebar-link" data-page="orders">
+                    <i class="fas fa-receipt"></i> Orders
+                    <span class="sidebar-badge" id="ordersBadge"></span>
                 </a>
                 <a href="#" class="sidebar-link" data-page="settings">
                     <i class="fas fa-cog"></i> Settings
@@ -277,13 +282,6 @@
                                             </label>
                                             <input type="file" id="imageFile" accept="image/*" style="display:none;">
                                         </div>
-                                        <div class="upload-divider">OR</div>
-                                        <div class="upload-option">
-                                            <input type="url" id="imageUrl" placeholder="Paste image URL here..." class="url-input">
-                                            <button type="button" class="btn btn-outline btn-sm" id="loadImageUrl">
-                                                <i class="fas fa-link"></i> Load
-                                            </button>
-                                        </div>
                                     </div>
                                     <input type="hidden" id="productImage" value="">
                                 </div>
@@ -390,6 +388,45 @@
                 </div>
 
             </div>
+
+                <!-- Orders Page -->
+                <div class="admin-page" id="page-orders">
+                    <div class="page-toolbar">
+                        <div class="toolbar-left">
+                            <select id="orderStatusFilter" class="toolbar-select">
+                                <option value="all">All Statuses</option>
+                                <option value="placed">📋 Placed</option>
+                                <option value="confirmed">✅ Confirmed</option>
+                                <option value="preparing">👨‍🍳 Preparing</option>
+                                <option value="out_for_delivery">🚚 Out for Delivery</option>
+                                <option value="delivered">🎉 Delivered</option>
+                                <option value="cancelled">❌ Cancelled</option>
+                            </select>
+                        </div>
+                        <div class="toolbar-right">
+                            <button class="btn btn-outline btn-sm" onclick="refreshOrdersTable()">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-table-wrapper">
+                        <table class="products-table" id="ordersTable">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date &amp; Time</th>
+                                    <th>Items</th>
+                                    <th>Total (₹)</th>
+                                    <th>Address</th>
+                                    <th>Status</th>
+                                    <th>Update Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ordersTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
         </main>
     </div>
 

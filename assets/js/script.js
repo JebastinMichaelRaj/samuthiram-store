@@ -662,6 +662,7 @@ async function sendWhatsAppOrder() {
     });
     msg += `\n💰 *Total: ₹${total}*\n\n📍 *Address:*\n${address}\n\n🕐 Please deliver ASAP. Thank you! 🙏`;
 
+<<<<<<< HEAD
     // Save order to DB before opening WhatsApp
     try {
         const res = await fetch('/api/orders', {
@@ -683,6 +684,10 @@ async function sendWhatsAppOrder() {
 
     window.open(`https://wa.me/919345635274?text=${encodeURIComponent(msg)}`, '_blank');
     showToast('📲 Opening WhatsApp…', 'success');
+=======
+    window.open(`https://wa.me/919345635274?text=${encodeURIComponent(msg)}`, '_blank');
+    showToast('Opening WhatsApp...', 'success');
+>>>>>>> 57043703a515b0941a7f5be7507f41dd60c62e41
 
     setTimeout(() => { cart = []; saveCart(); updateCartBadge(); updateCartUI(); renderProducts(); closeCart(); }, 1000);
 }
@@ -835,6 +840,7 @@ function initParticles() {
 
 // Inject animation CSS
 (function(){ const s=document.createElement('style'); s.textContent=`@keyframes particleFloat{0%,100%{transform:translate(0,0) rotate(0deg)}25%{transform:translate(15px,-20px) rotate(10deg)}50%{transform:translate(-10px,-35px) rotate(-5deg)}75%{transform:translate(20px,-15px) rotate(8deg)}}`; document.head.appendChild(s); })();
+<<<<<<< HEAD
 
 // ============ FEEDBACK SECTION ============
 function initFeedback() {
@@ -956,3 +962,5 @@ function escapeHtml(str) {
 }
 
 // Note: showToast is defined above (line ~573). Duplicate removed.
+=======
+>>>>>>> 57043703a515b0941a7f5be7507f41dd60c62e41
